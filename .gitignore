@@ -23,5 +23,3 @@ npm-debug.log*
 # Build output (if any in future)
 dist/
 build/
-
-migration/
