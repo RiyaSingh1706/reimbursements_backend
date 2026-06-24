@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment variables — never commit real credentials
+.env
+
+# Drizzle generated (optional — some teams commit migrations, some don't)
+# We COMMIT migrations so the tester can run db:migrate cleanly
+# so do NOT ignore src/db/migrations/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# Build output (if any in future)
+dist/
+build/
+
+migration/
