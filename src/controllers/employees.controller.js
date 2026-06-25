@@ -1,5 +1,5 @@
 const employeesService = require('../services/employees.service');
-const { EmployeeResponseDto } = require('../dtos/response/employees/employeeList.response.dto');
+const { EmployeeResponseDto } = require('../dtos/request/employees/employeeList.response.dto');
 
 class EmployeesController {
   async listEmployees(req, res, next) {

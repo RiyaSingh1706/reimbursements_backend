@@ -3,7 +3,7 @@ const router = express.Router();
 const employeesController = require('../controllers/employees.controller');
 const { isAuthenticated } = require('../middlewares/auth.middleware');
 const { requirePermission } = require('../middlewares/role.middleware');
-const { PERMISSIONS } = require('../constants/permissions');
+const { PERMISSIONS } = require('../constants/permission');
 
 router.get(
   '/',
