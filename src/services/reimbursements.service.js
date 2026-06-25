@@ -9,7 +9,7 @@ const {
   updateApeApprovalStatus,
   logApprovalAction
 } = require('../db/queries/reimbursements.queries');
-const { CreateReimbursementRequestDto } = require('../dtos/request/reimbursements/createReimbursement.request.dto');
+const { CreateReimbursementRequestDto } = require('../dtos/request/reimbursements/createReimbursements.request.dto');
 const { UpdateReimbursementRequestDto } = require('../dtos/request/reimbursements/updateReimbursement.request.dto');
 const { ROLES } = require('../constants/roles');
 const { APPROVAL_STATUS } = require('../constants/approvalStatus');

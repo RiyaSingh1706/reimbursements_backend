@@ -1,5 +1,5 @@
 const reimbursementsService = require('../services/reimbursements.service');
-const { ReimbursementResponseDto } = require('../dtos/response/reimbursements/reimbursementList.response.dto');
+const { ReimbursementResponseDto } = require('../dtos/request/reimbursements/reimbursementList.response.dto');
 
 class ReimbursementsController {
   async createReimbursement(req, res, next) {
