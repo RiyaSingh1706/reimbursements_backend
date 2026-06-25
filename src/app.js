@@ -3,14 +3,14 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 const app = express();
+const routes = require('./routes/index');
 
 // ── Body parser ──────────────────────────────────────────
 app.use(express.json());
 app.use(cookieParser());
 
 // ── Routes ───────────────────────────────────────────────
-// const routes = require('./routes/index');
-// app.use('/rest', routes);
+app.use('/rest', routes);
 
 // ── 404 handler ──────────────────────────────────────────
 app.use((req, res) => {
