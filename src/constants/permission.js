@@ -1,0 +1,21 @@
+const { ROLES } = require('./roles');
+
+const PERMISSIONS = Object.freeze({
+  // onboarding — public, no permissions needed
+
+  // roles
+  ASSIGN_ROLE: [ROLES.CFO],
+
+  // employees
+  VIEW_EMPLOYEES: [ROLES.RM, ROLES.APE, ROLES.CFO],
+  ASSIGN_EMPLOYEE: [ROLES.CFO],
+  REMOVE_EMPLOYEE: [ROLES.CFO],
+
+  // reimbursements
+  CREATE_REIMBURSEMENT: [ROLES.EMP],
+  VIEW_REIMBURSEMENTS: [ROLES.EMP, ROLES.RM, ROLES.APE, ROLES.CFO],
+  VIEW_REIMBURSEMENT_BY_ID: [ROLES.RM, ROLES.APE, ROLES.CFO],
+  UPDATE_REIMBURSEMENT: [ROLES.RM, ROLES.APE, ROLES.CFO],
+});
+
+module.exports = { PERMISSIONS };

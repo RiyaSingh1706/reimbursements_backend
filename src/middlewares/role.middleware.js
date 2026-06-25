@@ -1,6 +1,6 @@
-const requireRole = (...allowedRoles) => {
+const requirePermission = (permission) => {
   return (req, res, next) => {
-    const userRole = req.session.user?.role;
+    const userRole = req.user?.role;
 
     if (!userRole) {
       return res.status(401).json({
@@ -9,10 +9,10 @@ const requireRole = (...allowedRoles) => {
       });
     }
 
-    if (!allowedRoles.includes(userRole)) {
+    if (!permission.includes(userRole)) {
       return res.status(403).json({
         status: 'error',
-        message: `Forbidden — requires one of: ${allowedRoles.join(', ')}`
+        message: 'Forbidden — you do not have permission to perform this action'
       });
     }
 
@@ -20,4 +20,4 @@ const requireRole = (...allowedRoles) => {
   };
 };
 
-module.exports = { requireRole };
+module.exports = { requirePermission };
