@@ -1,8 +1,6 @@
 const { ROLES } = require('./roles');
 
 const PERMISSIONS = Object.freeze({
-  // onboarding — public, no permissions needed
-
   // roles
   ASSIGN_ROLE: [ROLES.CFO],
 
@@ -14,7 +12,7 @@ const PERMISSIONS = Object.freeze({
   // reimbursements
   CREATE_REIMBURSEMENT: [ROLES.EMP],
   VIEW_REIMBURSEMENTS: [ROLES.EMP, ROLES.RM, ROLES.APE, ROLES.CFO],
-  VIEW_REIMBURSEMENT_BY_ID: [ROLES.RM, ROLES.APE, ROLES.CFO],
+  VIEW_REIMBURSEMENT_BY_USER: [ROLES.RM, ROLES.APE, ROLES.CFO],
   UPDATE_REIMBURSEMENT: [ROLES.RM, ROLES.APE, ROLES.CFO],
 });
 
